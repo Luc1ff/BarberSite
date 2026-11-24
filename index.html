@@ -32,7 +32,6 @@
 
   ::selection { background: var(--gold); color: #000; }
 
-  /* —— Декоративный шум / текстура —— */
   body::before {
     content: '';
     position: fixed;
@@ -43,7 +42,6 @@
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
-  /* ============ ПЛАВАЮЩАЯ КНОПКА WHATSAPP ============ */
   .whatsapp-float {
     position: fixed;
     width: 60px; height: 60px;
@@ -62,7 +60,6 @@
   }
   .whatsapp-float svg { width: 32px; height: 32px; fill: currentColor; }
 
-  /* ============ НАВИГАЦИЯ ============ */
   header {
     position: fixed;
     top: 0; left: 0; width: 100%;
@@ -140,7 +137,6 @@
 
   .burger { display: none; font-size: 1.6rem; cursor: pointer; color: var(--gold); }
 
-  /* ============ HERO ============ */
   .hero {
     position: relative;
     min-height: 100vh;
@@ -244,7 +240,6 @@
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  /* —— Кнопки —— */
   .btn {
     display: inline-flex;
     align-items: center;
@@ -285,7 +280,6 @@
   .btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; transition: transform .3s; }
   .btn:hover svg { transform: translateX(4px); }
 
-  /* —— Нижняя панель hero —— */
   .hero-bar {
     position: relative;
     z-index: 3;
@@ -329,7 +323,6 @@
     100% { transform: translateX(100%); }
   }
 
-  /* ============ ОБЩИЕ СЕКЦИИ ============ */
   .section {
     padding: 130px 48px;
     max-width: 1300px;
@@ -383,7 +376,6 @@
   }
   .section-head.center .section-sub { margin-left: auto; margin-right: auto; }
 
-  /* ============ УСЛУГИ ============ */
   .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -456,7 +448,6 @@
   }
   .service-price span { font-size: .75rem; color: rgba(244,239,230,0.4); letter-spacing: 1px; text-transform: uppercase; }
 
-  /* ============ МАСТЕРА ============ */
   .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -520,7 +511,6 @@
   .master-socials svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; stroke-width: 1.8; }
   .master-socials a:hover svg { stroke: #000; }
 
-  /* ============ ГАЛЕРЕЯ ============ */
   .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -558,7 +548,6 @@
   }
   .gallery-item:hover::after { opacity: 1; background: rgba(13,13,13,0.4); }
 
-  /* ============ КАК НАС НАЙТИ ============ */
   .location-grid {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -608,7 +597,6 @@
     color: var(--gold);
   }
 
-  /* ============ ОТЗЫВЫ ============ */
   .testimonial-wrap {
     position: relative;
     max-width: 800px;
@@ -663,10 +651,9 @@
   }
   .t-dot.active { background: var(--gold); }
 
-  /* ============ ЦИФРЫ (ИСПРАВЛЕНО) ============ */
   .stats {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Жестко 4 колонки на ПК */
+    grid-template-columns: repeat(4, 1fr);
     gap: 2px;
     background: rgba(201,162,75,0.15);
     border: 1px solid rgba(201,162,75,0.15);
@@ -693,7 +680,6 @@
     display: block;
   }
 
-  /* ============ ФОРМА ЗАПИСИ ============ */
   .booking {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -815,7 +801,6 @@
   }
   .booking-success p { color: rgba(244,239,230,0.55); font-weight: 300; line-height: 1.7; }
 
-  /* ============ ФУТЕР ============ */
   footer {
     position: relative;
     z-index: 2;
@@ -874,7 +859,6 @@
     color: rgba(244,239,230,0.35);
   }
 
-  /* ============ АНИМАЦИИ ПОЯВЛЕНИЯ ============ */
   .reveal {
     opacity: 0;
     transform: translateY(50px);
@@ -886,7 +870,6 @@
   .reveal.d3 { transition-delay: .3s; }
   .reveal.d4 { transition-delay: .4s; }
 
-  /* ============ ЛАЙТБОКС ГАЛЕРЕИ ============ */
   .lightbox {
     position: fixed;
     inset: 0;
@@ -927,9 +910,8 @@
   }
   .lightbox-close:hover { background: var(--gold); color: #000; transform: rotate(90deg); }
 
-  /* ============ АДАПТИВ ============ */
   @media (max-width: 1024px) {
-    .stats { grid-template-columns: repeat(2, 1fr); } /* Планшеты: 2 колонки */
+    .stats { grid-template-columns: repeat(2, 1fr); }
     .booking { grid-template-columns: 1fr; }
     .booking-visual { min-height: 320px; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -959,7 +941,7 @@
     nav.open { right: 0; }
     .burger { display: block; z-index: 200; }
     
-    .stats { grid-template-columns: 1fr; } /* Телефоны: 1 колонка */
+    .stats { grid-template-columns: 1fr; }
     
     .hero-main { padding: 120px 24px 60px; }
     .hero h1 { font-size: clamp(2.5rem, 11vw, 3.5rem); line-height: 1.05; }
@@ -982,12 +964,10 @@
 </head>
 <body>
 
-<!-- Плавающая кнопка WhatsApp -->
 <a href="https://wa.me/79991234567" class="whatsapp-float" target="_blank" aria-label="Написать в WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
 
-<!-- ============ HEADER ============ -->
 <header id="header">
   <div class="logo" onclick="scrollToTop()">
     <svg class="logo-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"/></svg>
@@ -1003,10 +983,9 @@
   <div class="burger" id="burger">☰</div>
 </header>
 
-<!-- ============ HERO ============ -->
 <section class="hero">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1920&q=80" alt="Барбершоп">
+    <img src="fon.jpg" alt="Барбершоп">
   </div>
   
   <div class="hero-main">
@@ -1040,7 +1019,6 @@
   </div>
 </section>
 
-<!-- ============ УСЛУГИ ============ -->
 <section class="section" id="services">
   <div class="section-head reveal">
     <span class="section-tag">Услуги и цены</span>
@@ -1088,7 +1066,6 @@
   </div>
 </section>
 
-<!-- ============ МАСТЕРА ============ -->
 <section class="section" id="team">
   <div class="section-head center reveal">
     <span class="section-tag">Команда</span>
@@ -1098,7 +1075,7 @@
 
   <div class="team-grid">
     <div class="master reveal d1">
-      <img src="https://images.unsplash.com/photo-1503443207922-dff7d543fd0e?auto=format&fit=crop&w=700&q=80" alt="Артём">
+      <img src="1.jpg" alt="Артём">
       <div class="master-overlay">
         <div class="master-role">Основатель · Топ-барбер</div>
         <h3>Артём Соколов</h3>
@@ -1109,7 +1086,7 @@
       </div>
     </div>
     <div class="master reveal d2">
-      <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=700&q=80" alt="Максим">
+      <img src="2.jpg" alt="Максим">
       <div class="master-overlay">
         <div class="master-role">Барбер · Классика</div>
         <h3>Максим Ветров</h3>
@@ -1120,7 +1097,7 @@
       </div>
     </div>
     <div class="master reveal d3">
-      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Даниил">
+      <img src="3.jpg" alt="Даниил">
       <div class="master-overlay">
         <div class="master-role">Барбер · Фейд-мастер</div>
         <h3>Даниил Крылов</h3>
@@ -1131,7 +1108,7 @@
       </div>
     </div>
     <div class="master reveal d4">
-      <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=700&q=80" alt="Иван">
+      <img src="4.jpg" alt="Иван">
       <div class="master-overlay">
         <div class="master-role">Барбер · Борода</div>
         <h3>Иван Морозов</h3>
@@ -1144,7 +1121,6 @@
   </div>
 </section>
 
-<!-- ============ ГАЛЕРЕЯ ============ -->
 <section class="section" id="gallery">
   <div class="section-head reveal">
     <span class="section-tag">Портфолио</span>
@@ -1153,19 +1129,18 @@
   </div>
 
   <div class="gallery reveal">
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80" alt="Стрижка 1"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80" alt="Стрижка 2"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80" alt="Стрижка 3"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80" alt="Барбершоп"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&w=800&q=80" alt="Борода"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=800&q=80" alt="Инструменты"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1521490683712-35a1cb235d1c?auto=format&fit=crop&w=800&q=80" alt="Стрижка 4"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1593702288056-7927b442d0fa?auto=format&fit=crop&w=800&q=80" alt="Стрижка 5"></div>
-    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80" alt="Стрижка 6"></div>
+    <div class="gallery-item"><img src="01.jpg" alt="Работа 1"></div>
+    <div class="gallery-item"><img src="02.jpg" alt="Работа 2"></div>
+    <div class="gallery-item"><img src="03.jpg" alt="Работа 3"></div>
+    <div class="gallery-item"><img src="04.jpg" alt="Работа 4"></div>
+    <div class="gallery-item"><img src="05.jpg" alt="Работа 5"></div>
+    <div class="gallery-item"><img src="06.jpg" alt="Работа 6"></div>
+    <div class="gallery-item"><img src="07.jpg" alt="Работа 7"></div>
+    <div class="gallery-item"><img src="08.jpg" alt="Работа 8"></div>
+    <div class="gallery-item"><img src="09.jpg" alt="Работа 9"></div>
   </div>
 </section>
 
-<!-- ============ ОТЗЫВЫ ============ -->
 <section class="section" id="reviews">
   <div class="section-head center reveal">
     <span class="section-tag">Отзывы</span>
@@ -1180,7 +1155,6 @@
   </div>
 </section>
 
-<!-- ============ ЦИФРЫ ============ -->
 <section class="section" style="padding-top: 0;">
   <div class="stats reveal">
     <div class="stat"><b>8+</b><span>лет на рынке</span></div>
@@ -1190,7 +1164,6 @@
   </div>
 </section>
 
-<!-- ============ КАРТА И ПРАВИЛА ============ -->
 <section class="section" id="location">
   <div class="section-head center reveal">
     <span class="section-tag">Локация</span>
@@ -1215,7 +1188,6 @@
   </div>
 </section>
 
-<!-- ============ ЗАПИСЬ ============ -->
 <section class="section" id="booking">
   <div class="section-head center reveal">
     <span class="section-tag">Онлайн-запись</span>
@@ -1225,7 +1197,7 @@
 
   <div class="booking reveal">
     <div class="booking-visual">
-      <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1000&q=80" alt="Барбершоп">
+      <img src="fon.jpg" alt="Барбершоп">
       <div class="booking-visual-text">
         <h3>Ждём вас<br>в IRON & OAK</h3>
         <p>Москва, ул. Пречистенка, 14<br>Ежедневно с 10:00 до 22:00</p>
@@ -1298,7 +1270,6 @@
   </div>
 </section>
 
-<!-- ============ ФУТЕР ============ -->
 <footer>
   <div class="footer-grid">
     <div class="footer-col footer-brand">
@@ -1339,22 +1310,18 @@
   </div>
 </footer>
 
-<!-- ============ ЛАЙТБОКС ============ -->
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" id="lightboxClose">✕</button>
   <img src="" alt="Увеличенное изображение" id="lightboxImg">
 </div>
 
-<!-- ============ JS ============ -->
 <script>
-/* ---------- Шапка при скролле ---------- */
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 60);
 });
 function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
-/* ---------- Мобильное меню ---------- */
 const burger = document.getElementById('burger');
 const nav = document.getElementById('nav');
 burger.addEventListener('click', () => {
@@ -1368,7 +1335,6 @@ nav.querySelectorAll('a').forEach(a => {
   });
 });
 
-/* ---------- Плавный скролл ---------- */
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {
     const target = document.querySelector(link.getAttribute('href'));
@@ -1379,7 +1345,6 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-/* ---------- Анимации появления ---------- */
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -1390,7 +1355,6 @@ const revealObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-/* ---------- Отзывы (слайдер) ---------- */
 const testimonials = [
   {
     text: 'Хожу сюда уже два года. Ни разу не пожалел. Атмосфера, музыка, виски — и главное, всегда выходишь с ощущением, что тебя собрали заново.',
@@ -1440,7 +1404,6 @@ function showTestimonial(i) {
 showTestimonial(0);
 setInterval(() => showTestimonial((tIndex + 1) % testimonials.length), 6000);
 
-/* ---------- Галерея: лайтбокс ---------- */
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
 document.querySelectorAll('.gallery-item img').forEach(img => {
@@ -1458,7 +1421,6 @@ document.getElementById('lightboxClose').addEventListener('click', closeLightbox
 lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
-/* ---------- Отправка формы через Web3Forms ---------- */
 const bookingForm = document.getElementById('bookingForm');
 const bookingFormWrap = document.getElementById('bookingFormWrap');
 const bookingSuccess = document.getElementById('bookingSuccess');
@@ -1507,13 +1469,11 @@ if (bookingForm) {
   });
 }
 
-/* Кнопка "Записаться ещё раз" */
 document.getElementById('bookAgain').addEventListener('click', () => {
   bookingSuccess.classList.remove('show');
   bookingFormWrap.style.display = 'block';
 });
 
-/* ---------- Маска телефона ---------- */
 document.getElementById('bPhone').addEventListener('input', function () {
   let v = this.value.replace(/\D/g, '');
   if (v.startsWith('8')) v = '7' + v.slice(1);
@@ -1526,13 +1486,11 @@ document.getElementById('bPhone').addEventListener('input', function () {
   this.value = out;
 });
 
-/* ---------- Минимальная дата — сегодня ---------- */
 const now = new Date();
 now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
 const dateInput = document.getElementById('bDate');
 dateInput.min = now.toISOString().slice(0, 16);
 
-/* ---------- Фейковые соц-ссылки ---------- */
 function fakeLink(e) {
   e.preventDefault();
   const el = e.currentTarget;
